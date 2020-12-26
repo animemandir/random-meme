@@ -11,9 +11,9 @@ export const RandomMemeImg = styled.img`
     height: 500px;
     margin: 15px;
     cursor: pointer;
-    @media (max-width: 768px) {
-        width: 400px;
-        height: 500px;
+    @media (max-width: 600px) {
+        width: 300px;
+        height: 400px;
     }
 `;
 
