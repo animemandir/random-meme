@@ -14,6 +14,18 @@
     <title>Random Meme</title>
   </head>
   <body>
+    <script async defer type="text/javascript"
+          src="https://sdk.audienceplay.com/audienceplay.js">
+    </script>
+    <script type='text/javascript'>
+       window.onload = function(e)
+        {
+          audiencePlay.set("acp15ghuzz3ukjsjpzu9");
+          audiencePlay.start("Users");
+          audiencePlay.end();
+          audiencePlay.send();
+        }
+      </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
