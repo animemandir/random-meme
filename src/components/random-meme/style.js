@@ -5,7 +5,7 @@ export const RandomMemeDivContainer = styled.div`
     text-align: center;
     @media (max-width: 600px) {
         position: relative;
-        top: 30px;
+        top: 40px;
     }
 `;
 
@@ -16,9 +16,8 @@ export const RandomMemeImg = styled.img`
     margin: 15px;
     cursor: pointer;
     @media (max-width: 600px) {
-        margin: 6%;
-        width: 300px;
-        height: 400px;
+        width: 350px;
+        height: 350px;
     }
 `;
 
