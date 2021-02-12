@@ -1,6 +1,6 @@
 import React from "react";
 import getMemes from "../../actions/getMemes";
-import ScaleLoader from 'react-spinners/ScaleLoader';
+import ClipLoader from 'react-spinners/ClipLoader';
 import { css } from "@emotion/core";
 import { RandomMemeDivContainer, RandomMemeImg, RandomMemeButton } from "./style";
 
@@ -25,11 +25,11 @@ const RandomMeme = () => {
                 </RandomMemeDivContainer>
             ) : (
                     <div>
-                        <ScaleLoader
+                        <ClipLoader
                             color='gold'
                             loading={loading}
                             css={override}
-                            size={20}
+                            size={50}
                         />
                     </div>
                 )}

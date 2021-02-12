@@ -1,16 +1,15 @@
 import styled from "styled-components";
 
 export const RandomMemeDivContainer = styled.div`
-    margin: 4%;
+    margin-top: 4%;
     text-align: center;
     @media (max-width: 600px) {
         position: relative;
-        top: 40px;
+        top: 50px;
     }
 `;
 
 export const RandomMemeImg = styled.img`
-    border: solid 1px orange;
     width: 500px;
     height: 500px;
     margin: 15px;
