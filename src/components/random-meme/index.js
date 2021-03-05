@@ -1,7 +1,6 @@
 import React from "react";
 import getMemes from "../../actions/getMemes";
-import ClipLoader from 'react-spinners/ClipLoader';
-import { css } from "@emotion/core";
+import Loader from '../loader/index';
 import { RandomMemeDivContainer, RandomMemeImg, RandomMemeButton } from "./style";
 
 const RandomMeme = () => {
@@ -15,12 +14,6 @@ const RandomMeme = () => {
 
     React.useEffect(() => getMemes({ setMeme, setLoading }), []);
 
-    const override = css`
-        position: absolute;
-        top: 50%;
-        left: 50%;
-    `;
-
     return (
         <div>
             {!loading ? (
@@ -29,11 +22,8 @@ const RandomMeme = () => {
                     <RandomMemeButton onClick={() => getMemes({ setMeme, setLoading })}>Generate</RandomMemeButton>
                 </RandomMemeDivContainer>
             ) : (
-                    <ClipLoader
-                        color='gold'
+                    <Loader
                         loading={loading}
-                        css={override}
-                        size={50}
                     />
                 )}
         </div>
