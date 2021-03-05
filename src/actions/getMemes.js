@@ -3,9 +3,14 @@ import API from '../api/api';
 const getMemes = ({ setMeme, setLoading }) => {
     setLoading(true);
     API.get('/gimme')
-        .then(res => {
+        .then(data => {
             setTimeout(() => {
-                setMeme(res.data);
+                setMeme({
+                    title: data.data.title,
+                    author: data.data.author,
+                    imageUrl: data.data.url,
+                    url: data.data.postLink
+                });
                 setLoading(false);
             }, 100);
 
