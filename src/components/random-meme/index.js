@@ -1,7 +1,13 @@
 import React from "react";
 import getMemes from "../../actions/getMemes";
 import Loader from '../loader/index';
-import { RandomMemeDivContainer, RandomMemeImg, RandomMemeButton } from "./style";
+import {
+    RandomMemeDivContainer,
+    RandomMemeTitle,
+    RandomMemeImg,
+    RandomMemeAuthor,
+    RandomMemeButton
+} from "./style";
 
 const RandomMeme = () => {
     const [meme, setMeme] = React.useState({
@@ -18,14 +24,18 @@ const RandomMeme = () => {
         <div>
             {!loading ? (
                 <RandomMemeDivContainer>
-                    <RandomMemeImg src={`${meme.imageUrl}`} onClick={() => window.location.href = `${meme.url}`} />
+                    <RandomMemeTitle>{meme.title}</RandomMemeTitle>
+                    <div>
+                        <RandomMemeImg src={`${meme.imageUrl}`} onClick={() => window.location.href = `${meme.url}`} />
+                    </div>
+                    <RandomMemeAuthor>By <span style={{ fontWeight: 'bold', cursor: 'pointer' }} onClick={() => window.location.href = `https://www.reddit.com/user/${meme.author}`}>{meme.author}</span></RandomMemeAuthor>
                     <RandomMemeButton onClick={() => getMemes({ setMeme, setLoading })}>Generate</RandomMemeButton>
                 </RandomMemeDivContainer>
             ) : (
-                    <Loader
-                        loading={loading}
-                    />
-                )}
+                <Loader
+                    loading={loading}
+                />
+            )}
         </div>
     )
 };

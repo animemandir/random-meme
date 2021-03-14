@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 export const RandomMemeDivContainer = styled.div`
-    margin-top: 4%;
+    margin-top: 3%;
     text-align: center;
     @media (max-width: 600px) {
         position: relative;
         top: 50px;
     }
+`;
+
+export const RandomMemeTitle = styled.h1`
+    color: darkorange;
 `;
 
 export const RandomMemeImg = styled.img`
@@ -18,6 +22,10 @@ export const RandomMemeImg = styled.img`
         width: 350px;
         height: 350px;
     }
+`;
+
+export const RandomMemeAuthor = styled.span`
+    color: lightgrey;
 `;
 
 export const RandomMemeButton = styled.button`
